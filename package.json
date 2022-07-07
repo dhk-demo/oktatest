@@ -1,16 +1,20 @@
 {
   "name": "react_okta_staff_portal",
   "version": "0.1.0",
+  "homepage": "https://dhk-demo.github.io/oktatest",
   "private": true,
   "dependencies": {
     "@okta/okta-react": "1.2.3",
     "@okta/okta-signin-widget": "3.3.3",
+    "gh-pages": "^4.0.0",
     "react": "16.10.2",
     "react-dom": "16.10.2",
     "react-router-dom": "5.1.2",
     "react-scripts": "1.1.4"
   },
   "scripts": {
+	"predeploy": "npm run build",
+	"deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

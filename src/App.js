@@ -16,7 +16,7 @@ function onAuthRequired({ history }) {
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/oktatest">
         <Security
           issuer="https://dhk-demo.oktapreview.com/oauth2/default"
           client_id="0oa3zlgcnphlEg5V21d7"

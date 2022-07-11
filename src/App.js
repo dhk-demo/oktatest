@@ -13,14 +13,16 @@ function onAuthRequired({ history }) {
   history.push("/login");
 }
 
+var baseName = "oktatest";
+
 class App extends Component {
   render() {
     return (
-      <Router basename="/oktatest">
+      <Router basename={"/"+baseName}>
         <Security
           issuer="https://dhk-demo.oktapreview.com/oauth2/default"
           client_id="0oa3zlgcnphlEg5V21d7"
-          redirect_uri={window.location.origin + "/implicit/callback"}
+          redirect_uri={window.location.origin + "/" + baseName + "/implicit/callback"}
           onAuthRequired={onAuthRequired}
         >
           <div className="App">
